@@ -1,0 +1,158 @@
+\documentclass{article}
+\usepackage{bbold}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\setlength{\columnseprule}{1pt}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathdots}
+\usepackage{xfrac}
+
+
+\def\columnseprulecolor{\color{black}}
+
+\graphicspath{ {./resources/} }
+
+
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{extendedchars=\true}
+\lstset{style=mystyle}
+
+\newcommand\0{\mathbb{0}}
+\newcommand{\eps}{\varepsilon}
+\newcommand\overdot{\overset{\bullet}}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\const}{const}
+\DeclareMathOperator{\rg}{rg}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\alt}{alt}
+\DeclareMathOperator{\Sim}{sim}
+\DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\argmax}{argmax}
+\DeclareMathOperator{\argmin}{argmin}
+\DeclareMathOperator{\med}{med}
+\newcommand\1{\mathbb{1}}
+\newcommand\ul{\underline}
+\newcommand{\ppart}[2]{\frac{\partial #1}{\partial #2}}
+\renewcommand{\bf}{\textbf}
+\renewcommand{\it}{\textit}
+\newcommand\vect{\overrightarrow}
+\newcommand{\nm}{\operatorname}
+\DeclareMathOperator{\df}{d}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\bb}{\mathbb}
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+\newcommand{\an}[2]{\lan #1, #2 \ran}
+\newcommand{\fall}{\forall\,}
+\newcommand{\ex}{\exists\,}
+\newcommand{\lto}{\leftarrow}
+\newcommand{\xlto}{\xleftarrow}
+\newcommand{\rto}{\rightarrow}
+\newcommand{\xrto}{\xrightarrow}
+\newcommand{\uto}{\uparrow}
+\newcommand{\dto}{\downarrow}
+\newcommand{\lrto}{\leftrightarrow}
+\newcommand{\llto}{\leftleftarrows}
+\newcommand{\rrto}{\rightrightarrows}
+\newcommand{\Lto}{\Leftarrow}
+\newcommand{\Rto}{\Rightarrow}
+\newcommand{\Uto}{\Uparrow}
+\newcommand{\Dto}{\Downarrow}
+\newcommand{\LRto}{\Leftrightarrow}
+\newcommand{\Rset}{\bb{R}}
+\newcommand{\Rex}{\overline{\bb{R}}}
+\newcommand{\Cset}{\bb{C}}
+\newcommand{\Nset}{\bb{N}}
+\newcommand{\Qset}{\bb{Q}}
+\newcommand{\Zset}{\bb{Z}}
+\newcommand{\Bset}{\bb{B}}
+\renewcommand{\ker}{\nm{Ker}}
+\renewcommand{\span}{\nm{span}}
+\newcommand{\Def}{\nm{def}}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mcA}{\mc{A}}
+\newcommand{\mcB}{\mc{B}}
+\newcommand{\mcC}{\mc{C}}
+\newcommand{\mcD}{\mc{D}}
+\newcommand{\mcJ}{\mc{J}}
+\newcommand{\mcT}{\mc{T}}
+\newcommand{\us}{\underset}
+\newcommand{\os}{\overset}
+\newcommand{\ol}{\overline}
+\newcommand{\ot}{\widetilde}
+\newcommand{\vl}{\Biggr|}
+\newcommand{\ub}[2]{\underbrace{#2}_{#1}}
+\newcommand{\ob}[2]{\overbrace{#2}^{#1}}
+\newcommand{\pat}{\partial}
+
+\def\letus{%
+    \mathord{\setbox0=\hbox{$\exists$}%
+             \hbox{\kern 0.125\wd0%
+                   \vbox to \ht0{%
+                      \hrule width 0.75\wd0%
+                      \vfill%
+                      \hrule width 0.75\wd0}%
+                   \vrule height \ht0%
+                   \kern 0.125\wd0}%
+           }%
+}
+\DeclareMathOperator*\dlim{\underline{lim}}
+\DeclareMathOperator*\ulim{\overline{lim}}
+
+\everymath{\displaystyle}
+
+% Grath
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathmorphing}
+\tikzset{snake/.style={decorate, decoration=snake}}
+\tikzset{node/.style={circle, draw=black!60, fill=white!5, very thick, minimum size=7mm}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\title{\hugeПродвинутые алгоритмы}
+\author{Матвеев Сергей M3338}
+\date{Зимняя школа по математике}
+\begin{document}
+
+\maketitle
+\section{Range tree}
+$p_1, \dots, p_n \in \mathbb{R}^d$\\
+$[x_1^1, x_2^2] \times \dots \times [x_1^d, x_2^2]$
+\end{document}
